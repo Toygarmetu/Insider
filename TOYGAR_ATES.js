@@ -3,6 +3,11 @@
     
     // Attach functions to self object
     self.buildHTML = () => {
+        // Check if carousel already exists to prevent duplicates
+        if ($('.product-carousel-container').length > 0) {
+            return;
+        }
+        
         const html = `
             <div class="product-carousel-container">
                 <h2 class="product-carousel-title">You Might Also Like</h2>
